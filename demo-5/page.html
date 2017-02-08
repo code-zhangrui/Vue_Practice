@@ -29,7 +29,7 @@
             margin: 10px 10px;
             text-align: center;
         }
-        
+
         .title {
             clear: right;
         }
@@ -161,7 +161,7 @@
             </div>
             <ol class="todos">
                 <li v-for="todo in todoList">
-                    <input type="checkbox" v-model="todo.done">
+                    <input type="checkbox" v-model="todo.done" @click="updateTodos">
                     <div class="note">
 
                         <span> {{ todo.title }}</span>
