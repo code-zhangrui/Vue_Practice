@@ -1,0 +1,181 @@
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei";
+            list-style-position: inside;
+        }
+
+        body {
+            background: url('http://s1.picswalls.com/wallpapers/2014/07/19/tree-background_111647470_73.jpg');
+            background-size: 100%;
+        }
+
+        #app {
+            border-radius: 10px;
+            min-width: 270px;
+            color: white;
+            padding: 20px 50px;
+            background: rgba(130, 200, 90, 0.8);
+            margin: 50px 250px;
+        }
+
+        .title,
+        .newTask {
+            margin: 10px 10px;
+            text-align: center;
+        }
+        
+        .title {
+            clear: right;
+        }
+
+        .newTask input {
+            margin: 25px 0;
+            width: 400px;
+            height: 30px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .formRow input {
+            margin: 25px 0;
+            width: 200px;
+            height: 30px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .title p {
+            font-size: 56px;
+        }
+
+        .todos button {
+            width: 35px;
+            background: green;
+            color: white;
+            border: 2px solid white;
+            border-radius: 1px;
+        }
+
+        li {
+            overflow: auto;
+        }
+
+        .finished {
+            color: yellow;
+            font-weight: bold;
+        }
+
+        .note {
+            float: right;
+        }
+
+        .todos span,
+        button {
+            font-size: 26px;
+            margin-left: 15px;
+        }
+
+        .logout {
+            float: right;
+            background: rgb(130, 200, 90);
+            border: 4px solid white;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            line-height: 36px;
+            width: 72px;
+        }
+
+        #signInAndSignUp {
+            padding: 10px 0;
+            line-height: 50px;
+            font-size: 28px;
+        }
+
+        .btn-log {
+            background: rgb(130, 200, 90);
+            border: 4px solid white;
+            color: white;
+            font-size: 22px;
+            border-radius: 5px;
+            line-height: 36px;
+            width: 72px;
+        }
+
+        .welcome {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <section id="signInAndSignUp" v-if="!currentUser">
+            <div>
+                <label><input type="radio" name="type" v-model="actionType" value="signUp">注册</label>
+                <label><input type="radio" name="type" v-model="actionType" value="login">登入</label>
+            </div>
+            <div class="signUp" v-if="actionType==='signUp'">
+                <form @submit.prevent="signUp">
+                    <div class="formRow">
+                        用户名<input type="text" v-model="formData.username">
+                    </div>
+                    <div class="formRow">
+                        密&emsp;码<input type="password" v-model="formData.password">
+                    </div>
+                    <div class="formActions">
+                        <input class="btn-log" type="submit" value="注册">
+                    </div>
+                </form>
+            </div>
+            <div class="login" v-if="actionType==='login'">
+                <form @submit.prevent="login">
+                    <div class="formRow">
+                        用户名<input type="text" v-model="formData.username">
+                    </div>
+                    <div class="formRow">
+                        密&emsp;码<input type="password" v-model="formData.password">
+                    </div>
+                    <div class="formActions">
+                        <input class="btn-log" type="submit" value="登入">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="todo" v-if="currentUser">
+            <p class="welcome">欢迎你,{{currentUser.username}}！</p>
+            <button class="logout" @click="logout">登出</button>
+            <div class="title">
+                <p>TODOLIST</p>
+            </div>
+
+            <div class="newTask">
+                <input type="text" v-model="newTodo" @keypress.enter="addTodo">
+            </div>
+            <ol class="todos">
+                <li v-for="todo in todoList">
+                    <input type="checkbox" v-model="todo.done">
+                    <div class="note">
+
+                        <span> {{ todo.title }}</span>
+                        <span class="finished" v-if="todo.done">已完成</span>
+                        <span class="notfinished" v-else>未完成</span>
+                        <span style="width: 100px;">创建时间</span>
+                        <span>{{todo.createdAt}}</span>
+                        <button @click="removeTodo(todo)">X</button>
+                    </div>
+                </li>
+            </ol>
+        </section>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+
+</html>
