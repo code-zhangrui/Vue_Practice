@@ -17,19 +17,14 @@
    import ResumeEditor from './components/ResumeEditor'
    import ResumePreview from './components/ResumePreview'
    import icons from './assets/icons'
+   import store from './store/index'
    export default {
        name: 'app',
-       data: function () {
-         return {
-           text: '你好'
-         }
-       },
+       store,
        components: { Topbar, ResumeEditor, ResumePreview },
        created() {
        document.body.insertAdjacentHTML('afterbegin', icons) //
      }
-
-
    }
 
  </script>
@@ -55,11 +50,10 @@
      }
    }
     #resumeEditor{
-      width: 35%;
+      min-width: 35%;
       background: #444;
     }
     #resumePreview{
-
       flex-grow: 1;
       margin-left: 16px;
       background: #777;

@@ -4,7 +4,7 @@
       <span class="logo">Resumer</span>
       <div class="actions">
         <button class="primary">保存</button>
-        <button>预览</button>
+        <button>预览</button> 
       </div>
 
     </div>
