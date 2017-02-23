@@ -21,23 +21,23 @@
              birthday: '08-21'
            },
             workHistory: [
-               {company: 'AL', content: '我的第二份工作是' },
-               {company: 'TX', content: '我的第一份工作是' },
+               {company: '广西民族博物馆', content: '我的第一份工作是微信编辑' },
+               {},
             ],
             education: [
               { school: '韩国汉阳大学', content: '德语' },
               { school: '苏州科技学院', content: '数学' },
             ],
             projects: [
-              { name: 'project A', content: '文字' },
-              { name: 'project B', content: '文字' },
+              { name: '基于Vue的在线简历编辑器', content: 'Vue' },
+              { name: '基于Vue的音乐播放器', content: 'Vue' },
             ],
             awards: [
-              { name: 'awards A', content: '文字' },
-              { name: 'awards B', content: '文字' },
+              { name: '汉语大师', content: '比韩国人的汉语强' },
+              { name: '韩语大师', content: '比中国人的韩语强' },
             ],
             contacts: [
-              { contact: 'phone', content: '13812345678' },
+              { contact: 'phone', content: '00000000000' },
               { contact: 'qq', content: '12345678' },
             ],
         }
