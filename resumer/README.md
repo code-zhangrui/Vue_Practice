@@ -23,5 +23,14 @@ npm run unit
 # run all tests
 npm test
 ```
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+vue
+webpack
+babel-loader babel-core babel-preset-es2015 babel-preset-react
+leancloud-storage --save
+node-sass   
+normalize.css    
+sass-loader
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+vue-router   
+vuex
