@@ -17,29 +17,26 @@ import './assets/reset.css'
 import Topbar from './components/Topbar'
 import ResumeEditor from './components/ResumeEditor'
 import ResumePreview from './components/ResumePreview'
+import store from './store/index'
 
 export default {
   name: 'app',
-  data: function() {
-    return {
-      text: '你好啊'
-    }
-  },
+  store,
   components:{Topbar,ResumeEditor,ResumePreview}
 }
 </script>
 
-<style>
+<style lang="scss">
 .page{
   height:100vh;
   display:flex;
   flex-direction:column;
   background:#EAEBEC;
-}
-.page>main{
+
+>main{
   flex-grow:1;
 }
-.page>main{
+>main{
   min-width:1024px;
   max-width:1440px;
   margin-top:16px;
@@ -49,6 +46,7 @@ export default {
   padding:0 16px;
   width:100%;
   align-self:center;
+ }
 }
 #resumeEditor{
   width:35%;
