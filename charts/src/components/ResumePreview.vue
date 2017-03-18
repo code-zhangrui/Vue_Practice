@@ -6,8 +6,7 @@
      </h1>
      <h2>{{resume.profile.title}}</h2>
      <p>
-        <small>{{resume.profile.city}}</small>
-        <small>{{resume.profile.birthday}}</small>
+        {{resume.profile.city}}
      </p>
   </section>
 
