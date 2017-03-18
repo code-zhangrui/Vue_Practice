@@ -68,8 +68,8 @@
     overflow: auto;
      > nav{
       width: 80px;
-      background: black;
-      color: white;
+      background: #343D50;
+      color: #808BA2;
       > ol {
         > li{
           height: 48px;

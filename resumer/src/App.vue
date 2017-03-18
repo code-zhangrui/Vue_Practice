@@ -60,7 +60,7 @@
      }
    }
     #resumeEditor{
-      min-width: 35%;
+      min-width: 25%;
       background: #444;
     }
     #resumePreview{

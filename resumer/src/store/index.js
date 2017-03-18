@@ -20,9 +20,9 @@
              { field: 'contacts', icon: 'phone' },
            ],
            profile: {
-             name: '',
-             city: '',
-             title: '',
+             name: '张睿',
+             city: '杭州',
+             title: '前端工程师',
              birthday: ''
            },
             workHistory: [

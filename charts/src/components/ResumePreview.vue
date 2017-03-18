@@ -80,15 +80,15 @@ export default{
 </script>
 
 <style lang="scss">
-    #resumePreview{ background:white; box-shadow:0 1px 3px 0 rgba(0,0,0,0.25); padding: 2em;
+    #resumePreview{ background:#fff2e3; box-shadow:0 1px 3px 0 rgba(0,0,0,0.25); padding: 2em;
 
-     color: #333; line-height: 1.2; overflow: auto;
+     color: #343D50; line-height: 1.2; overflow: auto;
       * {box-sizing: border-box; font-variant: normal; font-weight: normal;}
       ol{ list-style: none; }
       section + section{ margin-top: 2em; }
      p{ white-space: pre-line; } // 请问为什么要加这一行
      section {
-       > h2:first-child{ background: #ddd; display: inline-block; padding: .2em; 
+       > h2:first-child{ background: #343D50;color:#fff2e3;display: inline-block; padding: .2em; 
          margin-bottom: .5em;
        }
      }

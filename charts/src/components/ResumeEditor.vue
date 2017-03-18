@@ -2,7 +2,7 @@
  <div id="resumeEditor">
       <nav>
        <ol>
-         <li v-for="(item,index) in resume.config" :class="{active: item.field===selected}" @click="selected=item.field"> {{index}} </li>
+         <li v-for="(item,index) in resume.config" :class="{active: item.field===selected}" @click="selected=item.field"> {{item.field}} </li>
        </ol>
      </nav>
      <ol class="panels">
@@ -55,15 +55,16 @@ export default{
 
 <style lang="scss" scoped>
  #resumeEditor{
-  background:#fff;
+  background:white;
   box-shadow:0 1px 3px 0 rgba(0,0,0,0.25);
   display:flex;
   flex-direction:row;
   overflow:auto;
   >nav{
-   width:80px;
-   background:black;
+   width:100px;
+   background:#343D50;
    color:white;
+   cursor:pointer;
    >ol{
     >li{
      height:48px;
@@ -72,22 +73,27 @@ export default{
      align-items:center;
      margin-top:16px;
      margin-bottom:16px;
-     
      &.active{
-       background:white;
-       color:black;
+       background:#fff2e3;
+       color:#343D50
      }
+    }
+    li:hover{
+      background:#6b778e;
+      color:#E1E8EF;
     }
    }
   }
   > .panels{
        flex-grow: 1;
+       background:#fff2e3;
+       color:#343D50;
        > li {
          padding: 24px;
        }
      }
       svg.icon{
-        width: 24px; // 原设计稿 32px 不好看，改成 24px
+        width: 24px; 
         height: 24px;
      }
    }
@@ -97,6 +103,7 @@ export default{
    .resumeField{
      > label{
        display: block;
+
      }
      input[type=text]{
        margin: 16px 0;
@@ -112,4 +119,5 @@ export default{
      border-top: 1px solid #ddd;
      margin: 24px 0;
      }
+
 </style>

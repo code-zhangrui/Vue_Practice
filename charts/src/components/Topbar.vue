@@ -1,7 +1,7 @@
 <template>
  <div id="topbar">
    <div class="wrapper">
-     <span class="logo">Resume</span>
+     <span class="logo">文本编辑器</span>
    </div>
   </div>
  </template>
@@ -14,7 +14,8 @@
 
 <style scoped lang="scss">
  #topbar{
- 	background:#fff;
+ 	background:#4E96F7;
+  color:white;
  	box-shadow:0 1px 3px 0 rgba(0,0,0,0.25);
 >.wrapper{
     min-width:1024px;
@@ -30,7 +31,6 @@
  }
  .logo{
  font-size:24px;
- color:#000;
   }
  }
    button{ 

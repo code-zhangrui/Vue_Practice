@@ -31,7 +31,7 @@ export default {
   height:100vh;
   display:flex;
   flex-direction:column;
-  background:#EAEBEC;
+  background:#d4d9dd;
 
 >main{
   flex-grow:1;
@@ -49,12 +49,12 @@ export default {
  }
 }
 #resumeEditor{
-  min-width:35%;
+  min-width:27%;
   background:#444;
 }
 #resumePreview{
   flex-grow:1;
-  margin-left:16px;
+  margin-left:33px;
   background:#777;
 }
 </style>
