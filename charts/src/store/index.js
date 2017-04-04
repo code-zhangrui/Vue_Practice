@@ -17,7 +17,7 @@ export default new Vuex.Store({
              { field: 'awards'},
              { field: 'contacts'},
            ],
-        profile:{name:'张睿',city:'上海',title:'前端工程师',birthday:''},
+        profile:{name:'张睿',city:'',title:'前端工程师',birthday:''},
         workHistory: [
              { company: '自由职业', content: '我的第二份工作是前端工程师' },
              { company: '广西民族博物馆', content: '我的第一份工作是微信编辑' },
